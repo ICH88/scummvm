@@ -301,7 +301,7 @@ static void update_variables(void) {
 	var.value = NULL;
 	mouse_speed = 1.0f;
 	if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var) && var.value) {
-		mouse_speed = (float)atof(var.value);
+		mouse_speed = (float)atof(var.value) * 5;
 	}
 
 	var.key = "scummvm_mouse_fine_control_speed_reduction";
